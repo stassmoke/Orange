@@ -1,0 +1,365 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+    letter-spacing: .65px
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+ul
+  li
+    display: inline-block
+    text-decoration: none
+    font-weight: 600
+    a
+      text-decoration: none
+      color: $text
+      text-transform: uppercase
+      font-size: 13px
+      &:hover
+        color: $accent
+        text-decoration: none
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.wrapper
+  max-width: 1280px
+  margin: 0 auto
+  padding: 20px 0
+.section_1
+  background-image: url(../img/bg1.png)
+  background-size: cover
+  background-color: #fefefe
+  padding-bottom: 100px
+  .mnu1
+    margin-bottom: 45px
+    li
+      margin-right: 25px
+      &:last-child
+        margin-right: 0
+  .mnu2
+    li
+      padding: 0 40px
+      border-right: 1px solid $text
+      &:last-child
+        border: none
+      &:first-child
+        padding-left: 0
+      a
+        white-space: pre-line
+        line-height: 1
+        font-weight: 300
+        vertical-align: top
+        display: inline-block
+  .mnu1, .mnu2
+    margin-left: 250px
+  .section_1__content
+    margin-top: 80px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h1
+      text-transform: uppercase
+      color: $text2
+      font-size: 100px
+      font-weight: 500
+      text-align: center
+      margin: 0
+    .comment
+      width: 60%
+      display: inline-block
+      margin: 50px 0 0 270px
+      font-weight: 800
+      font-size: 20px
+      color: $text2
+      position: relative
+      &:before
+        content: ''
+        background-color: $text2
+        width: 70px
+        height: 2px
+        display: inline-block
+        position: absolute
+        top: 17px
+        left: -100px
+      p
+        margin: 0
+      a
+        text-align: right
+        display: block
+        color: $accent
+        text-transform: uppercase
+        font-size: 13px
+        letter-spacing: 2.6px
+        &:after
+          content: '\f0da'
+          font-family: FontAwesome
+          margin-left: 5px
+          font-size: 12px
+          text-decoration: none
+        &:hover
+          color: $accent
+          &:after
+            text-decoration: none
+
+    .some
+      display: block
+      width: 90%
+      margin-top: 50px
+      .marg
+        margin: 20px 0
+        display: block
+
+.section_2
+  background-color: #a7d2db
+  padding: 130px 0
+  .container1
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+    .item
+      width: 273px
+      color: $text2
+      //margin-right: 71px
+      line-height: 36px
+      position: relative
+      h4
+        font-size: 18px
+        text-transform: uppercase
+      p
+        font-size: 17px
+        font-weight: 300
+        width: 230px
+      .line
+        font-size: 40px
+        color: #ffffff
+        position: absolute
+        top: 50px
+        left: -88px
+        transform: rotate(270deg)
+        font-weight: 800
+        vertical-align: top
+        padding-bottom: 15px
+        &:before
+          content: ''
+          display: inline-block
+          width: 64px
+          height: 1px
+          background-color: #fefefe
+          margin-right: 25px
+.section_3
+  background-image: url(../img/bg2.png)
+  background-size: cover
+  padding: 80px 0
+  .container1
+    display: flex
+    flex-direction: column
+    align-items: center
+    h3
+      text-transform: uppercase
+      position: relative
+      font-size: 36px
+      letter-spacing: 21px
+      color: $text2
+      font-weight: 300
+      display: block
+      margin: 0
+      &::after
+        content: ''
+        position: absolute
+        left: 50%
+        display: block
+        height: 30px
+        width: 1px
+        background-color: $text2
+        margin: 20px 0
+    h2
+      color: $text2
+      position: relative
+      font-size: 64px
+      font-weight: 800
+      text-transform: uppercase
+      margin: 50px 0 0 0
+      &::after
+        content: '\f0dd'
+        font-family: FontAwesome
+        color: $accent
+        position: absolute
+        bottom: -50px
+        left: 47%
+        font-size: 50px
+    .table
+      margin-top: 150px
+      table
+        border-spacing: 0 10px
+        td, th
+          padding: 10px 20px
+          border-right: 1px solid #d7d7d7
+          cursor: pointer
+          color: $text2
+          a
+            color: $text2
+            text-transform: uppercase
+          &:last-child
+            border-right: none
+        th
+          border-bottom: 1px solid #d7d7d7
+          text-transform: uppercase
+        tr:hover td
+          text-decoration: underline
+          color: $accent
+        tr:hover td a
+          color: $accent
+    .btn
+      margin-top: 100px
+      background-color: #c4e5ec
+      border: none
+      padding: 20px 20px 20px 40px
+      text-transform: uppercase
+      outline: none
+      font-size: 13px
+      color: $text2
+      font-weight: 800
+      cursor: pointer
+      &::after
+        content: '\f0da'
+        font-family: FontAwesome
+        margin-left: 30px
+
+
+footer
+  background-color: #1c1c1c
+  padding: 80px 0 20px 0
+  .container1
+    display: flex
+    flex-direction: column
+    align-items: center
+  .call
+    text-transform: uppercase
+    font-size: 36px
+    letter-spacing: 21px
+    color: #464646
+
+    &::after
+      content: ''
+      position: absolute
+      left: 50%
+      display: block
+      height: 30px
+      width: 1px
+      background-color: #464646
+      margin: 10px 0
+  .content
+    margin-top: 90px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    .box
+      //max-width: 310px
+      line-height: 20px
+      .first
+        font-size: 20px
+        color: #464646
+        text-transform: uppercase
+        &::before
+          margin-right: 10px
+          font-size: 25px
+      .point
+        display: block
+        &::before
+          content: '\f041'
+          font-family: FontAwesome
+      .phone
+        &::before
+          content: '\f10b'
+          font-family: FontAwesome
+      .fax
+        &::before
+          content: '\f02f'
+          font-family: FontAwesome
+          font-size: 20px
+      .mail
+        &::before
+          content: '\f003'
+          font-family: FontAwesome
+          font-size: 20px
+
+      .second
+        width: 310px
+        font-size: 28px
+        color: #7e7e7e
+        line-height: 35px
+  .bot_content
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-top: 170px
+    color: #464646
+    span
+      display: block
+      img
+        background-color: #505151
+        vertical-align: baseline
+        margin-left: 15px
+
+.modal
+  display: none
+  position: fixed
+  z-index: 1
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgba(0, 0, 0, 0.5)
+
+  &_content
+    background-color: #fefefe
+    margin: 15% auto
+    padding: 20px
+    border: 1px solid #888
+    width: 80%
+    height: 500px
+    .close
+      float: right
+      font-size: 28px
+      font-weight: 800
+      color: #aaa
+      cursor: pointer
+
+@import "media"
