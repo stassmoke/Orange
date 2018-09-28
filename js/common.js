@@ -1,5 +1,23 @@
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('modal');
+var closeBtn = document.getElementsByClassName("modal__close")[0];
 
+
+
+
+//Close on window//
+window.onclick = function () {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+//Close on btn//
+closeBtn.addEventListener('click', closeModal);
+function closeModal() {
+    modal.style.display = "none";
+}
+
+//Open Popup//
 function openPopup() {
     var btns = document.querySelectorAll('.popup');
 
@@ -9,14 +27,15 @@ function openPopup() {
         element.onclick = function() {
             event.preventDefault();
             var container = this.parentNode.parentNode;
-            console.log(container)
             modal.style.display = "block";
 
             constructionPopup(container)
         }
     }
 }
+openPopup();
 
+//Add to Popup content//
 function constructionPopup(container) {
     var city = container.children[0].innerText;
     var date = container.children[1].innerText;
@@ -33,30 +52,11 @@ function constructionPopup(container) {
     aircraftText.innerHTML = aircraft;
 }
 
-// function closePopup() {
-//   var close = document.querySelector('close');
-//   close.onclick = function () {
-//   modal.style.display = "none";
-// };
-// }
-
-// closePopup();
-openPopup();
-
-// openPopup();
 
 
 
 
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-// span.onclick = function () {
-//     modal.style.display = "none";
-// };
 
 
 

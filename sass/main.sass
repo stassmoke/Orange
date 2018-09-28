@@ -25,19 +25,7 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
-ul
-  li
-    display: inline-block
-    text-decoration: none
-    font-weight: 600
-    a
-      text-decoration: none
-      color: $text
-      text-transform: uppercase
-      font-size: 13px
-      &:hover
-        color: $accent
-        text-decoration: none
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -55,35 +43,59 @@ b, strong
   max-width: 1280px
   margin: 0 auto
   padding: 20px 0
-.section_1
+.section__1
   background-image: url(../img/bg1.png)
   background-size: cover
   background-color: #fefefe
   padding-bottom: 100px
-  .mnu1
+  .mnu__first
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: center
     margin-bottom: 45px
-    li
+    div
       margin-right: 25px
       &:last-child
         margin-right: 0
-  .mnu2
-    li
+      a
+        text-decoration: none
+        color: $text
+        text-transform: uppercase
+        font-size: 13px
+        font-weight: 800
+        &:hover
+          color: $accent
+          text-decoration: none
+  .mnu__second
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: flex-start
+    margin-bottom: 80px
+    div
+      border-right: 1px solid rgba(#555555, .2)
       padding: 0 40px
-      border-right: 1px solid $text
+      line-height: 15px
+      width: 160px
+      &:nth-child(5)
+        width: 135px
+      &:nth-child(6)
+        width: 160px
       &:last-child
         border: none
-      &:first-child
-        padding-left: 0
-      a
-        white-space: pre-line
-        line-height: 1
-        font-weight: 300
-        vertical-align: top
-        display: inline-block
-  .mnu1, .mnu2
-    margin-left: 250px
-  .section_1__content
-    margin-top: 80px
+    a
+      text-decoration: none
+      color: $text
+      text-transform: uppercase
+      font-size: 13px
+      &:hover
+        color: $accent
+        text-decoration: none
+
+  .section__1_content
     display: flex
     flex-direction: column
     align-items: center
@@ -95,11 +107,11 @@ b, strong
       font-weight: 500
       text-align: center
       margin: 0
-    .comment
+    .content__comment
       width: 60%
       display: inline-block
       margin: 50px 0 0 270px
-      font-weight: 800
+      font-weight: 500
       font-size: 20px
       color: $text2
       position: relative
@@ -133,66 +145,70 @@ b, strong
             text-decoration: none
 
     .some
-      display: block
-      width: 90%
-      margin-top: 50px
-      .marg
-        margin: 20px 0
-        display: block
+      width: 85%
+      margin: 50px 0 0 65px
+      font-size: 20px
+      p
+        margin-bottom: 20px
 
-.section_2
+
+.section__2
   background-color: #a7d2db
   padding: 130px 0
-  .container1
+  .container__1
     display: flex
     flex-direction: row
     align-items: flex-start
     justify-content: space-between
     flex-wrap: wrap
-    .item
-      width: 273px
-      color: $text2
-      //margin-right: 71px
-      line-height: 36px
-      position: relative
-      h4
-        font-size: 18px
-        text-transform: uppercase
-      p
-        font-size: 17px
-        font-weight: 300
-        width: 230px
-      .line
-        font-size: 40px
-        color: #ffffff
-        position: absolute
-        top: 50px
-        left: -88px
-        transform: rotate(270deg)
-        font-weight: 800
-        vertical-align: top
-        padding-bottom: 15px
-        &:before
-          content: ''
-          display: inline-block
-          width: 64px
-          height: 1px
-          background-color: #fefefe
-          margin-right: 25px
-.section_3
+    .it
+      padding-left: 51px
+      .item
+        color: $text2
+        line-height: 36px
+        position: relative
+        h3
+          font-size: 21px
+          text-transform: uppercase
+          font-family: 'PFDinDisplayPro-Medium'
+        p
+          font-size: 20px
+          font-weight: 300
+          width: 240px
+          overflow: hidden
+          word-break: keep-all
+        .line
+          font-size: 40px
+          color: #ffffff
+          position: absolute
+          top: 45px
+          left: -88px
+          transform: rotate(270deg)
+          font-weight: 800
+          vertical-align: top
+          padding-bottom: 15px
+          font-family: 'PFDinDisplayPro-Medium'
+          &:before
+            content: ''
+            display: inline-block
+            width: 64px
+            height: 1px
+            background-color: #fefefe
+            margin-right: 25px
+.section__3
   background-image: url(../img/bg2.png)
   background-size: cover
   padding: 80px 0
-  .container1
+  .container__1
     display: flex
     flex-direction: column
     align-items: center
-    h3
+    .section__3_top
       text-transform: uppercase
       position: relative
       font-size: 36px
       letter-spacing: 21px
-      color: $text2
+      color: $text
       font-weight: 300
       display: block
       margin: 0
@@ -203,9 +219,9 @@ b, strong
         display: block
         height: 30px
         width: 1px
-        background-color: $text2
+        background-color: rgba(#555555, .7)
         margin: 20px 0
-    h2
+    .section__3_top-big
       color: $text2
       position: relative
       font-size: 64px
@@ -222,6 +238,7 @@ b, strong
         font-size: 50px
     .table
       margin-top: 150px
+      font-size: 21px
       table
         border-spacing: 0 10px
         td, th
@@ -262,7 +279,7 @@ b, strong
 footer
   background-color: #1c1c1c
   padding: 80px 0 20px 0
-  .container1
+  .container__1
     display: flex
     flex-direction: column
     align-items: center
@@ -270,7 +287,7 @@ footer
     text-transform: uppercase
     font-size: 36px
     letter-spacing: 21px
-    color: #464646
+    color: rgba(#555555, .7)
 
     &::after
       content: ''
@@ -287,8 +304,7 @@ footer
     flex-direction: row
     justify-content: space-between
     width: 100%
-    .box
-      //max-width: 310px
+    &__box
       line-height: 20px
       .first
         font-size: 20px
@@ -322,7 +338,7 @@ footer
         font-size: 28px
         color: #7e7e7e
         line-height: 35px
-  .bot_content
+  .bot__content
     display: flex
     flex-direction: row
     justify-content: space-between
@@ -330,10 +346,9 @@ footer
     width: 100%
     margin-top: 170px
     color: #464646
-    span
-      display: block
+    p
       img
-        background-color: #505151
+        background-color: #555555
         vertical-align: baseline
         margin-left: 15px
 
@@ -348,18 +363,21 @@ footer
   overflow: auto
   background-color: rgba(0, 0, 0, 0.5)
 
-  &_content
+  &__content
     background-color: #fefefe
     margin: 15% auto
     padding: 20px
     border: 1px solid #888
     width: 80%
     height: 500px
-    .close
-      float: right
+    position: relative
+    .modal__close
+      position: absolute
+      top: -23px
+      right: -7px
       font-size: 28px
       font-weight: 800
-      color: #aaa
+      color: red
       cursor: pointer
 
 @import "media"
